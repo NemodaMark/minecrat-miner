@@ -25,12 +25,12 @@ def on_select(event):
             break
     print("Selected option:", selected_option)
 
-def start_code1(pickaxe_time):
+def start_mine(pickaxe_time):
         # Start Minecraft
     minecraft_window = pyautogui.getWindowsWithTitle('Minecraft')[0]
     if minecraft_window:
         minecraft_window.activate()
-        subprocess.Popen(["python", "code1.py", str(pickaxe_time)])
+        subprocess.Popen(["python", "mine.py", str(pickaxe_time)])
         
     else:
         print("Minecraft window not found.")
@@ -39,7 +39,7 @@ def start_minecraft():
     global selected_pickaxe_time
     response = messagebox.askokcancel("Alert", "You can stop the code by holding enter! understood?")
     if response == True:
-        start_code1(selected_pickaxe_time)
+        start_mine(selected_pickaxe_time)
 
 def on_ok_button_click():
     start_minecraft()

@@ -5,7 +5,7 @@ import random
 import keyboard
 import sys
 
-# Retrieve the pickaxe time argument passed from code2.py
+# Retrieve the pickaxe time argument passed from setup.py
 pickaxe_time = float(sys.argv[1])
 
 def stop_code():
